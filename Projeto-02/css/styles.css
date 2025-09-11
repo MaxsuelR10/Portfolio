@@ -1,0 +1,320 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    background: linear-gradient(120deg, #e0e7ff 0%, #f8fafc 100%);
+    color: #1a202c;
+}
+
+.header {
+    background: #2b2d42;
+    padding: 0;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.07);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 0;
+}
+
+.logo {
+    width: 44px;
+    height: 44px;
+    margin-right: 12px;
+}
+
+.header-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #edf2f4;
+    letter-spacing: 1px;
+}
+
+.header-help {
+    color: #8d99ae;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.header-help:hover {
+    color: #f77f00;
+}
+
+.main-bg {
+    background: #fff;
+    min-height: 520px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 60px;
+    padding: 48px 0 60px 0;
+    position: relative;
+}
+
+.main-info {
+    color: #2b2d42;
+    text-align: left;
+    margin-top: 40px;
+    min-width: 340px;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.main-logo {
+    width: 90px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.09);
+}
+
+.main-info h1 {
+    font-size: 2.2rem;
+    margin: 0 0 10px 0;
+    color: #2b2d42;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.main-info p {
+    font-size: 1.15rem;
+    margin: 0;
+    color: #495057;
+}
+
+.register-box {
+    background: #f7fafc;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(44,62,80,0.10);
+    padding: 38px 32px 28px 32px;
+    min-width: 340px;
+    max-width: 370px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border: 2px solid #a0aec0;
+}
+
+.register-box h2 {
+    margin: 0 0 18px 0;
+    color: #2b2d42;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.register-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.register-box input[type="text"],
+.register-box input[type="email"],
+.register-box input[type="password"] {
+    padding: 12px;
+    border: 1.5px solid #bfc9d1;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    transition: border 0.2s;
+}
+
+.register-box input:focus {
+    border: 1.5px solid #f77f00;
+    outline: none;
+    background: #f1f8ff;
+}
+
+.register-box button[type="submit"] {
+    background: linear-gradient(90deg, #f77f00 60%, #fcbf49 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(247,127,0,0.08);
+}
+
+.register-box button[type="submit"]:hover {
+    background: linear-gradient(90deg, #fcbf49 60%, #f77f00 100%);
+}
+
+.divider {
+    text-align: center;
+    color: #adb5bd;
+    margin: 18px 0 10px 0;
+    font-size: 1rem;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    display: inline-block;
+    width: 40%;
+    height: 1px;
+    background: #e0e7ef;
+    vertical-align: middle;
+    margin: 0 8px;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.social-buttons button {
+    flex: 1;
+    padding: 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: #e0e7ff;
+    color: #2b2d42;
+    transition: background 0.2s;
+    border: 1.5px solid #bfc9d1;
+}
+
+.social-buttons .facebook {
+    background: #4267B2;
+    color: #fff;
+    border: none;
+}
+
+.social-buttons .google {
+    background: #fff;
+    color: #2b2d42;
+    border: 1.5px solid #bfc9d1;
+}
+
+.social-buttons .facebook:hover {
+    background: #314d86;
+}
+
+.social-buttons .google:hover {
+    background: #f1f8ff;
+}
+
+.terms {
+    font-size: 0.9rem;
+    color: #8d99ae;
+    margin: 8px 0 0 0;
+    text-align: center;
+}
+
+.terms a {
+    color: #f77f00;
+    text-decoration: underline;
+}
+
+.login-link {
+    font-size: 1rem;
+    color: #8d99ae;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.login-link a {
+    color: #f77f00;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footer {
+    background: #2b2d42;
+    padding: 36px 0 0 0;
+    margin-top: 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 60px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-content > div {
+    min-width: 160px;
+    margin-bottom: 18px;
+}
+
+.footer-content h4 {
+    margin: 0 0 10px 0;
+    color: #fcbf49;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-content li {
+    margin-bottom: 6px;
+}
+
+.footer-content a {
+    color: #edf2f4;
+    text-decoration: none;
+    font-size: 0.97rem;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+    color: #f77f00;
+}
+
+.pay-logo {
+    width: 38px;
+    margin-right: 6px;
+    margin-top: 4px;
+    vertical-align: middle;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #8d99ae;
+    font-size: 0.95rem;
+    margin: 24px 0 0 0;
+    padding-bottom: 18px;
+}
+
+@media (max-width: 900px) {
+    .main-bg {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding: 32px 0 40px 0;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 18px;
+        padding-left: 18px;
+    }
+    .register-box, .main-info {
+        min-width: 90vw;
+        max-width: 98vw;
+    }
+}

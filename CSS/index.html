@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <!-- 3 Internal CSS -->
+     <style>
+     </style>
+     <!-- 4 External CSS -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- 1- Inline CSS -->
+     <h1 style="color: blue;">Mudar cor com Inline</h1>
+     <h1>Outro título</h1>
+     <!-- 2- Múltiplas regras -->
+      <h1 style="color: purple; font-size: 50px; border-bottom: 1px solid red;">
+        Mudar cor e tamanho da fonte
+      </h1>
+      <!-- 3 Internal CSS -->
+       <P>Estilizando com Internal</P>
+       <p>E usado pra estilizar um grupo de uma vez </p>
+       <p>Exemplo é todos esses parágrafos </p>
+
+       <!-- 37 Position Sticky -->
+        <div class="sticky">
+            <span>Eu sou sticky</span>
+        </div>
+
+       <!-- 4 external CSS -->
+        <h3>Meu Titulo Externo CSS</h3>
+
+        <!-- 5 Classes -->
+        <P class="paragraph">Algum parágrafo 1</P>
+        <P class="paragraph">Algum parágrafo 2</P>
+        <P class="paragraph">Algum parágrafo 3</P>
+    <!-- 6- ID -->
+     <h1 id="exclusive-title">Este é um titulo com id</h1>
+        <!--7 Nome de cores-->
+
+        <P class="color-name">Teste de cores</P>
+
+        <!-- 8 HEXADECIMAL -->
+
+            <p class="hex">Parágrafo com hex</p>
+
+        <!-- 9 RGBA -->
+
+        <P class="rgba">Esse foi estilizado com RGBA</P>
+
+        <!-- 10 opacidade no background -->
+
+        <div class="bg-opacity">
+            <p>Estou aqui!</p>
+        </div>
+
+        <div class="bg-opacity-2">
+            <p>Estou aqui quase visivel!</p>
+        </div>
+        <!--11 O pacidade com background -->
+        <div class="rgba-opacity">
+            <h1>Este título precisa estar visível</h1>
+        </div>
+        <!--12 Background com imagem-->
+
+        <h1 class="bg-image">Este título tem uma imagem</h1>
+
+        <!---13 Centralizando image de background -->
+
+        <div class="not-centered-bg"></div>
+        <div class="centered-bg"></div>
+
+        <!--14 Largura e altura -->
+        <div class="height-width"></div>
+        <div class="height-width-2"></div>
+
+        <!--15 Padding -->
+        <div class="without-padding">Este não tem padding</div>
+        <div class="padding">Este tem padding</div>
+
+        <!-- 16 Padding individual -->
+         <p class="padding-individual">Este elemento tem paddings diferentes</p>
+        
+         <!-- 17 Shorthand Padding-->
+          <p class="shorthand-padding">Algum Texto</p>
+          <p class="shorthand-padding-2">Algum Texto 2</p>
+        
+          <!-- 18 Padding com width-->
+           <div class="without-border-box">
+            <p>Algum conteúdo</p>
+           </div>
+           <div class="border-box">
+            <p>Algum conteúdo</p>
+           </div>
+
+           <!-- 19 Border -->
+            <div class="border">Borda</div>
+            <div class="border-2">Borda 2</div>
+
+            <!-- 20 Borda arredondada (Da pra aplicar borda em cada canto separado)-->
+            <div class="rounded-p">Eu estou arredondado</div>
+            <div class="rounded-p-2">Eu estou arredondado 2</div>
+
+            <!-- 21 BOX MODEL -->
+            <div class="box-model">
+                <p>Tenho todas as propriedades do box model</p>
+            </div>
+
+            <!-- 22 Text alignment -->
+             <p class="text-aligned">Alinhado a direita</p>
+             <div class="container-center">
+                <h2>Estamos centralizados</h2>
+                <p>Algum texto</p>
+             </div>
+
+             <!-- 23 Text decorartion -->
+              <p class="underline">Eu tenho um underline</p>
+              <p class="line-trough">Eu tenho um risco</p>
+              <a href="#" class="remove-underline">Sem underline</a>
+
+              <!-- 24 Text transforme -->
+               <p class="upper">Este texto é em caixa alta.</p>
+               <p class="lower">ESTE É EM CAIXA BAIXA.</p>
+
+               <!-- 25 LETTER SPACING-->
+                <h2 class="spacing">EU tenho um espaçamento maior.</h2>
+
+                <!-- 26 Fontes -->
+                 <p class="serif">Serif fonte</p>
+                 <p class="sans-serif">Sans serif fonte</p>
+                 <p class="monospace">Monospace fonte</p>
+                 <p class="cursive">Cursive fonte</p>
+                 <p class="fantasy">Fantasy fonte</p>
+
+                 <!-- 27 Fonte style-->
+
+                 <p class="italic">Euesto em itálico</p>
+                 <p class="oblique">Eu estou em oblíqueo</p>
+
+                 <!-- 28 Font weight -->
+                  <p class="thin">Eu sou mais fino</p>
+                  <p class="bold">Eu estou em bold</p>
+                  <p class="bolder">Eu sou a maior fonte!</p>
+
+                  <!-- 29 Fonte size -->
+                   <h4 class="small">Título pequeno</h4>
+                   <h4 class="big">Título grande</h4>
+
+                   <!-- 30 Display -->
+                    <div class="inline-box">a</div>
+                    <div class="inline-box">b</div>
+                    <div class="inline-box">c</div>
+                    <span class="block">Teste</span>
+                    <span class="block">Teste 2</span>
+
+                    <!-- 31 Escondendo elementos -->
+                    <p class="invisible">Me encontre se puder</p>
+
+                    <!-- 32 Posição static -->
+                    <div class="static">Eu sou etático!</div>
+
+                    <!-- 33 Posição relative -->
+                     <div class="relative">
+                        <span>Eu sou relativo</span>
+                     </div>
+                     <p>Eu sou um parágrafo</p>
+
+                     <!-- 34 Posição absolute -->
+                      <div class="absolute">
+                        <span>Eu sou absoluto</span>
+                      </div>
+                      <p>Eu sou um parágrafo</p>
+
+                      <!-- 35 Relative com absolute -->
+                       <div class="relative-container">
+                        <div class="absolute-1"></div>
+                        <div class="absolute-2"></div>
+                       </div>
+
+                       <!-- 36 Position Fixed -->
+                        <div class="fixed">
+                            <span>Fixed</span>
+                        </div>
+
+                        <!-- 37 Position Sticky depois da aula 3 -->
+
+                        <!-- 38 Position Z-INNDEX -->
+                         <div class="relative-container">
+                            <div class="absolute-3"></div>
+                            <div class="absolute-4"></div>
+                            <div class="absolute-5"></div>
+                         </div>
+     </body>
+</html>
