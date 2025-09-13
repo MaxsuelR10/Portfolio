@@ -1,0 +1,124 @@
+.main-menu {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+.menu-link {
+    color: #edf2f4;
+    font-size: 1.08rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+.menu-link:hover, .menu-link.active {
+    background: #f77f00;
+    color: #fff;
+}
+.profile-menu-container {
+    position: relative;
+    margin-left: 18px;
+}
+.profile-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #fcbf49;
+    transition: border 0.2s;
+}
+.profile-icon:hover {
+    border: 2px solid #f77f00;
+}
+.profile-menu {
+    display: none;
+    position: absolute;
+    top: 52px;
+    right: 0;
+    background: #fff;
+    border: 1.5px solid #a0aec0;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+    min-width: 180px;
+    z-index: 100;
+    flex-direction: column;
+}
+.profile-menu a {
+    display: block;
+    padding: 12px 18px;
+    color: #2b2d42;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid #f1f1f1;
+    transition: background 0.2s;
+}
+.profile-menu a:last-child {
+    border-bottom: none;
+}
+.profile-menu a:hover {
+    background: #f7fafc;
+    color: #f77f00;
+}
+.cotacoes-section {
+    background: #f7fafc;
+    padding: 18px 0;
+    border-bottom: 2px solid #a0aec0;
+}
+.cotacoes-box {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #2b2d42;
+    font-size: 1.08rem;
+}
+.cotacoes-box h3 {
+    margin: 0 0 6px 0;
+    color: #f77f00;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.noticias-main {
+    max-width: 1200px;
+    margin: 32px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.noticias-section {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.07);
+    padding: 24px 32px;
+}
+.noticias-section h2 {
+    color: #f77f00;
+    margin-top: 0;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+.noticias-section article {
+    margin-bottom: 18px;
+}
+.noticias-section h3 {
+    margin: 0 0 4px 0;
+    color: #2b2d42;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.noticias-section p {
+    margin: 0 0 8px 0;
+    color: #495057;
+    font-size: 1rem;
+}
+@media (max-width: 900px) {
+    .main-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .noticias-main {
+        padding: 0 8px;
+    }
+    .noticias-section {
+        padding: 16px 8px;
+    }
+}
