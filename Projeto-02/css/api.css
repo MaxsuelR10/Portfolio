@@ -1,0 +1,78 @@
+body {
+    background: #f7fafc;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #2b2d42;
+    margin: 0;
+    padding: 0;
+}
+.cotacao-container {
+    max-width: 420px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.09);
+    padding: 28px 32px;
+    text-align: center;
+}
+.cotacao-container h2 {
+    color: #f77f00;
+    margin-bottom: 18px;
+}
+.petr4-box {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+}
+.petr4-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.petr4-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background: #f7fafc;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+}
+.petr4-ticker {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2b2d42;
+    margin-right: 8px;
+}
+.petr4-name {
+    font-size: 1rem;
+    color: #495057;
+}
+.petr4-info {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 1.18rem;
+    font-weight: 700;
+}
+.petr4-price {
+    color: #f77f00;
+}
+.petr4-change.up {
+    color: #2ecc40;
+}
+.petr4-change.down {
+    color: #e74c3c;
+}
+.petr4-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    font-size: 1rem;
+    color: #2b2d42;
+    justify-content: center;
+}
+.petr4-details span {
+    background: #f7fafc;
+    border-radius: 6px;
+    padding: 4px 10px;
+    margin-top: 4px;
+}

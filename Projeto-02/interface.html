@@ -1,134 +1,299 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portal News - Interface</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/interface.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-</head>
-<body>
-    <header class="header">
-        <div class="header-content">
-            <div style="display: flex; align-items: center;">
-                <img src="logo1.png" alt="Logo" class="logo">
-                <span class="header-title">Portal News</span>
-            </div>
-            <nav class="main-menu">
-                <a href="#esportes" class="menu-link">Esportes</a>
-                <a href="#politica" class="menu-link">Política</a>
-                <a href="#internacionais" class="menu-link">Internacionais</a>
-                <a href="#moda" class="menu-link">Moda</a>
-                <a href="#mercado" class="menu-link">Mercado Financeiro</a>
-            </nav>
-            <div class="profile-menu-container">
-                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Perfil" class="profile-icon" id="profileIcon">
-                <div class="profile-menu" id="profileMenu">
-                    <a href="#">Visualizar Perfil</a>
-                    <a href="#">Postagens</a>
-                    <a href="#">Configurações</a>
-                    <a href="#">Suporte</a>
-                    <a href="#">Sair</a>
-                </div>
-            </div>
+    <link rel="stylesheet" href="css/petr4.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/interface.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header gradient-header">
+      <div class="header-content">
+        <div style="display: flex; align-items: center">
+          <img src="logo1.png" alt="Logo" class="logo" />
+          <span class="header-title">Portal News</span>
         </div>
+        <nav class="main-menu">
+          <a href="#esportes" class="menu-link"
+            ><i class="fas fa-futbol"></i> Esportes</a
+          >
+          <a href="#politica" class="menu-link"
+            ><i class="fas fa-landmark"></i> Política</a
+          >
+          <a href="#internacionais" class="menu-link"
+            ><i class="fas fa-globe"></i> Internacionais</a
+          >
+          <a href="#moda" class="menu-link"
+            ><i class="fas fa-tshirt"></i> Moda</a
+          >
+          <a href="#mercado" class="menu-link"
+            ><i class="fas fa-chart-line"></i> Mercado</a
+          >
+        </nav>
+        <div class="profile-menu-container" id="profileMenuContainer">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+            alt="Perfil"
+            class="profile-icon"
+            id="profileIcon"
+          />
+          <div class="profile-menu" id="profileMenu">
+            <a href="#"><i class="fas fa-user"></i> Visualizar Perfil</a>
+            <a href="#"><i class="fas fa-newspaper"></i> Postagens</a>
+            <a href="#"><i class="fas fa-cog"></i> Configurações</a>
+            <a href="#"><i class="fas fa-headset"></i> Suporte</a>
+            <a href="#"><i class="fas fa-sign-out-alt"></i> Sair</a>
+          </div>
+        </div>
+      </div>
     </header>
     <section class="cotacoes-section">
-        <div class="cotacoes-box">
-            <h3>Cotações</h3>
-            <div id="cotacoes">
-                <p>Carregando cotações...</p>
-            </div>
+      <div class="cotacoes-box">
+        <h3><i class="fas fa-coins"></i> Cotações em tempo real</h3>
+        <div id="cotacoes">
+          <p>Carregando cotações...</p>
         </div>
+        <!-- Cotação PETR4 -->
+        <div class="cotacao-container">
+          <h2>Cotação PETR4 em tempo real</h2>
+          <div id="cotacao-petr4"></div>
+        </div>
+      </div>
     </section>
     <main class="noticias-main">
+      <div class="noticias-row">
         <section id="esportes" class="noticias-section">
-            <h2>Esportes</h2>
-            <article>
+          <h2><i class="fas fa-futbol"></i> Esportes</h2>
+          <div class="noticias-grid">
+            <a class="noticia-card destaque" href="#">
+              <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+                alt="Futebol"
+              />
+              <div>
                 <h3>Brasil vence Argentina em clássico emocionante</h3>
-                <p>Em uma partida eletrizante, a seleção brasileira superou a Argentina por 2 a 1 e garantiu vaga na final do torneio sul-americano.</p>
-            </article>
-            <article>
+                <p>
+                  Em uma partida eletrizante, a seleção brasileira superou a
+                  Argentina por 2 a 1 e garantiu vaga na final do torneio
+                  sul-americano.
+                </p>
+              </div>
+            </a>
+            <a class="noticia-card" href="#">
+              <img
+                src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=400&q=80"
+                alt="Olimpíadas"
+              />
+              <div>
                 <h3>Olimpíadas: atletas brasileiros conquistam medalhas</h3>
-                <p>O Brasil soma mais duas medalhas de ouro nas Olimpíadas, desta vez no judô e na natação.</p>
-            </article>
+                <p>
+                  O Brasil soma mais duas medalhas de ouro nas Olimpíadas, desta
+                  vez no judô e na natação.
+                </p>
+              </div>
+            </a>
+          </div>
         </section>
         <section id="politica" class="noticias-section">
-            <h2>Política</h2>
-            <article>
+          <h2><i class="fas fa-landmark"></i> Política</h2>
+          <div class="noticias-grid">
+            <a class="noticia-card destaque" href="#">
+              <img
+                src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80"
+                alt="Congresso"
+              />
+              <div>
                 <h3>Reforma tributária avança no Congresso</h3>
-                <p>O projeto de reforma tributária foi aprovado na Câmara e segue para o Senado, prometendo mudanças no sistema de impostos.</p>
-            </article>
-            <article>
+                <p>
+                  O projeto de reforma tributária foi aprovado na Câmara e segue
+                  para o Senado, prometendo mudanças no sistema de impostos.
+                </p>
+              </div>
+            </a>
+            <a class="noticia-card" href="#">
+              <img
+                src="https://imagens.ebc.com.br/OP9kzoe-sbeD174PleRJT_YlTMA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/08/13/0d9a9104.jpg?itok=HA-QDh5x"
+                alt="Economia"
+              />
+              <div>
                 <h3>Presidente anuncia novo pacote econômico</h3>
-                <p>O governo federal anunciou um pacote de medidas para estimular a economia e gerar empregos.</p>
-            </article>
+                <p>
+                  O governo federal anunciou um pacote de medidas para estimular
+                  a economia e gerar empregos.
+                </p>
+              </div>
+            </a>
+          </div>
         </section>
+      </div>
+      <div class="noticias-row">
         <section id="internacionais" class="noticias-section">
-            <h2>Internacionais</h2>
-            <article>
+          <h2><i class="fas fa-globe"></i> Internacionais</h2>
+          <div class="noticias-grid">
+            <a class="noticia-card destaque" href="#">
+              <img
+                src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
+                alt="G20"
+              />
+              <div>
                 <h3>Cúpula do G20 discute mudanças climáticas</h3>
-                <p>Líderes das maiores economias do mundo se reúnem para debater ações contra o aquecimento global.</p>
-            </article>
-            <article>
+                <p>
+                  Líderes das maiores economias do mundo se reúnem para debater
+                  ações contra o aquecimento global.
+                </p>
+              </div>
+            </a>
+            <a class="noticia-card" href="#">
+              <img
+                src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
+                alt="Satélite"
+              />
+              <div>
                 <h3>Nova tecnologia revoluciona comunicação global</h3>
-                <p>Empresas lançam satélites de alta velocidade, prometendo internet rápida em todo o planeta.</p>
-            </article>
+                <p>
+                  Empresas lançam satélites de alta velocidade, prometendo
+                  internet rápida em todo o planeta.
+                </p>
+              </div>
+            </a>
+          </div>
         </section>
         <section id="moda" class="noticias-section">
-            <h2>Moda</h2>
-            <article>
+          <h2><i class="fas fa-tshirt"></i> Moda</h2>
+          <div class="noticias-grid">
+            <a class="noticia-card destaque" href="#">
+              <img
+                src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80"
+                alt="Moda Paris"
+              />
+              <div>
                 <h3>Semana de Moda de Paris apresenta tendências para 2026</h3>
-                <p>Estilistas apostam em cores vibrantes e tecidos sustentáveis nas passarelas internacionais.</p>
-            </article>
-            <article>
+                <p>
+                  Estilistas apostam em cores vibrantes e tecidos sustentáveis
+                  nas passarelas internacionais.
+                </p>
+              </div>
+            </a>
+            <a class="noticia-card" href="#">
+              <img
+                src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80"
+                alt="Influenciadores"
+              />
+              <div>
                 <h3>Influenciadores ditam moda nas redes sociais</h3>
-                <p>Novos estilos ganham força com a popularidade de influenciadores digitais no Instagram e TikTok.</p>
-            </article>
+                <p>
+                  Novos estilos ganham força com a popularidade de
+                  influenciadores digitais no Instagram e TikTok.
+                </p>
+              </div>
+            </a>
+          </div>
         </section>
-        <section id="mercado" class="noticias-section">
-            <h2>Mercado Financeiro</h2>
-            <article>
+      </div>
+      <div class="noticias-row mercado-row">
+        <section id="mercado" class="noticias-section mercado-section">
+          <h2><i class="fas fa-chart-line"></i> Mercado Financeiro</h2>
+          <div class="noticias-grid">
+            <a class="noticia-card destaque" href="#">
+              <img
+                src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?auto=format&fit=crop&w=400&q=80"
+                alt="Bolsa"
+              />
+              <div>
                 <h3>Ibovespa fecha em alta após anúncio do Banco Central</h3>
-                <p>O principal índice da bolsa brasileira subiu 1,5% após a redução da taxa de juros.</p>
-            </article>
-            <article>
+                <p>
+                  O principal índice da bolsa brasileira subiu 1,5% após a
+                  redução da taxa de juros.
+                </p>
+              </div>
+            </a>
+            <a class="noticia-card" href="#">
+              <img
+                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80"
+                alt="Dólar"
+              />
+              <div>
                 <h3>Dólar recua frente ao real</h3>
-                <p>Moeda americana registra queda após divulgação de dados positivos da economia brasileira.</p>
-            </article>
+                <p>
+                  Moeda americana registra queda após divulgação de dados
+                  positivos da economia brasileira.
+                </p>
+              </div>
+            </a>
+          </div>
         </section>
+      </div>
     </main>
     <footer class="footer">
-        <div class="footer-content">
-            <div>
-                <h4>INSTITUCIONAL</h4>
-                <ul>
-                    <li><a href="#">Sobre o Portal</a></li>
-                    <li><a href="#">Equipe</a></li>
-                    <li><a href="#">Política de Privacidade</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>CONTATO</h4>
-                <ul>
-                    <li><a href="#">Fale Conosco</a></li>
-                    <li><a href="#">Anuncie</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>REDES SOCIAIS</h4>
-                <ul>
-                    <li><a href="#" class="link-instagram">Instagram</a></li>
-                    <li><a href="#" class="link-facebook">Facebook</a></li>
-                    <li><a href="#" class="link-twitter">Twitter</a></li>
-                </ul>
-            </div>
+      <div class="footer-content">
+        <div>
+          <h4>INSTITUCIONAL</h4>
+          <ul>
+            <li><a href="#">Sobre o Portal</a></li>
+            <li><a href="#">Equipe</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+          </ul>
         </div>
-        <div class="footer-bottom">
-            © 2025 Portal News. Todos os direitos reservados.
+        <div>
+          <h4>CONTATO</h4>
+          <ul>
+            <li><a href="#">Fale Conosco</a></li>
+            <li><a href="#">Anuncie</a></li>
+          </ul>
         </div>
+        <div>
+          <h4>REDES SOCIAIS</h4>
+          <ul>
+            <li><a href="#" class="link-instagram">Instagram</a></li>
+            <li><a href="#" class="link-facebook">Facebook</a></li>
+            <li><a href="#" class="link-twitter">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2025 Portal News. Todos os direitos reservados.
+      </div>
     </footer>
+    <script>
+      // Menu perfil: permanece aberto enquanto mouse está sobre ícone ou menu
+      const profileIcon = document.getElementById("profileIcon");
+      const profileMenu = document.getElementById("profileMenu");
+      const profileMenuContainer = document.getElementById(
+        "profileMenuContainer"
+      );
+      let menuTimeout;
+
+      function showMenu() {
+        clearTimeout(menuTimeout);
+        profileMenu.classList.add("show");
+      }
+      function hideMenu() {
+        menuTimeout = setTimeout(() => {
+          profileMenu.classList.remove("show");
+        }, 200);
+      }
+      profileIcon.addEventListener("mouseenter", showMenu);
+      profileMenu.addEventListener("mouseenter", showMenu);
+      profileIcon.addEventListener("mouseleave", hideMenu);
+      profileMenu.addEventListener("mouseleave", hideMenu);
+    </script>
     <script src="js/interface.js"></script>
+    <!-- ...existing code... -->
+<link rel="stylesheet" href="css/petr4.css">
+<!-- ...existing code... -->
+<script src="js/interface.js"></script>
+<script src="js/petr4.js"></script>
 </body>
+</html>
+  </body>
 </html>
