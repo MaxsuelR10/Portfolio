@@ -1,9 +1,10 @@
-import React, { useReducer, useEffect, useState } from 'react'
+import React, { useReducer, useEffect, useState, useRef } from 'react'
 import Header from './components/Header'
 import ItemForm from './components/ItemForm'
 import ItemList from './components/ItemList'
 import Totals from './components/Totals'
 import { loadItems, saveItems } from './services/storage'
+import UndoToast from './components/UndoToast'
 
 const initialState = { items: [] }
 
@@ -28,6 +29,8 @@ export default function App() {
   const [search, setSearch] = useState('')
   const [categoryFilter, setCategoryFilter] = useState('all')
   const [statusFilter, setStatusFilter] = useState('all')
+  const [lastAction, setLastAction] = useState(null)
+  const undoTimerRef = useRef(null)
 
   useEffect(() => {
     const items = loadItems()
@@ -40,6 +43,9 @@ export default function App() {
 
   function handleAdd(item) {
     dispatch({ type: 'ADD', payload: item })
+    setLastAction({ type: 'ADD', item })
+    clearTimeout(undoTimerRef.current)
+    undoTimerRef.current = setTimeout(() => setLastAction(null), 6000)
   }
 
   function handleUpdate(item) {
@@ -48,12 +54,38 @@ export default function App() {
   }
 
   function handleDelete(id) {
+    const toDelete = state.items.find(i => i.id === id)
+    if (!toDelete) return
     dispatch({ type: 'DELETE', payload: id })
     if (editing && editing.id === id) setEditing(null)
+    setLastAction({ type: 'DELETE', item: toDelete })
+    clearTimeout(undoTimerRef.current)
+    undoTimerRef.current = setTimeout(() => setLastAction(null), 6000)
   }
 
   function handleEdit(item) {
     setEditing(item)
+  }
+
+  function handleToggle(itemBefore, itemAfter) {
+    dispatch({ type: 'UPDATE', payload: itemAfter })
+    setLastAction({ type: 'TOGGLE', before: itemBefore, after: itemAfter })
+    clearTimeout(undoTimerRef.current)
+    undoTimerRef.current = setTimeout(() => setLastAction(null), 6000)
+  }
+
+  function handleUndo() {
+    if (!lastAction) return
+    const a = lastAction
+    if (a.type === 'DELETE') {
+      dispatch({ type: 'ADD', payload: a.item })
+    } else if (a.type === 'TOGGLE') {
+      dispatch({ type: 'UPDATE', payload: a.before })
+    } else if (a.type === 'ADD') {
+      dispatch({ type: 'DELETE', payload: a.item.id })
+    }
+    setLastAction(null)
+    clearTimeout(undoTimerRef.current)
   }
 
   // unique categories for filter dropdown (include 'all')
@@ -93,6 +125,7 @@ export default function App() {
             onUpdate={item => dispatch({ type: 'UPDATE', payload: item })}
             onDelete={handleDelete}
             onEdit={handleEdit}
+            onToggle={(before, after) => handleToggle(before, after)}
           />
 
           <h2>Adquiridos</h2>
@@ -101,9 +134,11 @@ export default function App() {
             onUpdate={item => dispatch({ type: 'UPDATE', payload: item })}
             onDelete={handleDelete}
             onEdit={handleEdit}
+            onToggle={(before, after) => handleToggle(before, after)}
           />
         </section>
       </main>
+      <UndoToast action={lastAction} onUndo={handleUndo} />
     </div>
   )
 }

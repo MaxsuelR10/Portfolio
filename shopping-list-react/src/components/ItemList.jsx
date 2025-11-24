@@ -1,12 +1,12 @@
 import React from 'react'
 import ItemCard from './ItemCard'
 
-export default function ItemList({ items = [], onUpdate, onDelete, onEdit }) {
+export default function ItemList({ items = [], onUpdate, onDelete, onEdit, onToggle }) {
   if (!items.length) return <p className="empty">Nenhum item</p>
   return (
     <div className="item-list">
       {items.map(item => (
-        <ItemCard key={item.id} item={item} onUpdate={onUpdate} onDelete={onDelete} onEdit={onEdit} />
+        <ItemCard key={item.id} item={item} onUpdate={onUpdate} onDelete={onDelete} onEdit={onEdit} onToggle={onToggle} />
       ))}
     </div>
   )

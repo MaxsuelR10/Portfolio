@@ -30,4 +30,9 @@ body{font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(
 .item-card .actions button{margin-left:6px;padding:6px 8px;border-radius:6px;border:1px solid #e2e8f0;background:white}
 .item-card .actions .danger{border-color:var(--danger);color:var(--danger)}
 .empty{color:#475569}
+.undo-toast{position:fixed;left:16px;bottom:16px;background:var(--card);padding:10px 12px;border-radius:8px;box-shadow:0 6px 18px rgba(2,6,23,0.08);display:flex;gap:8px;align-items:center}
+.undo-toast .msg{font-size:14px}
+.undo-toast .undo-btn{background:transparent;border:1px solid var(--accent);color:var(--accent);padding:6px 10px;border-radius:6px}
+.item-form.editing{box-shadow: 0 0 0 3px rgba(37,99,235,0.06);border-radius:8px}
+.item-form .actions button[disabled]{opacity:0.5}
 @media(max-width:900px){.container{grid-template-columns:1fr}.right{order:2}.left{order:1}}

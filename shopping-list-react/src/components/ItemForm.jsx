@@ -68,12 +68,32 @@ export default function ItemForm({ onAdd, onUpdate, editingItem, onCancel }) {
         acquiredAt: null
       }
       onAdd && onAdd(item)
+      // focus name for next entry
+      setTimeout(() => nameRef.current && nameRef.current.focus(), 40)
     }
     setName('')
     setQuantity(1)
     setPrice('')
     setCategory('')
     setNotes('')
+  }
+
+  function formatPriceDisplay(value) {
+    if (value === '' || value == null) return ''
+    const num = Number(String(value).replace(',', '.'))
+    if (Number.isNaN(num)) return ''
+    return num.toFixed(2)
+  }
+
+  function onPriceBlur() {
+    setPrice(formatPriceDisplay(price))
+  }
+
+  function onPriceFocus() {
+    // unformat - keep only digits and dot
+    if (!price) return
+    const raw = String(price).replace(/[^0-9.,]/g, '').replace(',', '.')
+    setPrice(raw)
   }
 
   return (
@@ -92,7 +112,7 @@ export default function ItemForm({ onAdd, onUpdate, editingItem, onCancel }) {
       <div className="row">
         <label>
           Preço (unit.)
-          <input value={price} onChange={e => setPrice(e.target.value)} placeholder="39.90" />
+          <input value={price} onChange={e => setPrice(e.target.value)} onBlur={onPriceBlur} onFocus={onPriceFocus} placeholder="39.90" aria-label="Preço unitário" />
         </label>
         <label>
           Categoria

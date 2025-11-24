@@ -8,7 +8,7 @@ export default function Totals({ items = [] }) {
   const totalWish = items.filter(i => i.status !== 'acquired').reduce((s, i) => s + (i.price || 0) * (i.quantity || 1), 0)
   const totalAcquired = items.filter(i => i.status === 'acquired').reduce((s, i) => s + (i.price || 0) * (i.quantity || 1), 0)
   return (
-    <div className="totals">
+    <div className="totals" role="status" aria-live="polite">
       <div className="box">
         <div className="label">Total (Desejos)</div>
         <div className="value">{fmt(totalWish)}</div>
